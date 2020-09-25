@@ -3,7 +3,7 @@ pipeline {
     label 'master'
   }
     environment {
-      PATH = "/usr/bin:$PATH"
+      PATH = "/usr/local/bin:$PATH"
   }  
   stages {
     stage('checkout') {
