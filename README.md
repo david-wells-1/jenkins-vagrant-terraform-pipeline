@@ -4,10 +4,6 @@ This is a lab to demonstrate running Jenkins on a Vagrant VM and create a Jenkin
 
 ### Setup ###
 
-* Vagrant version 2.2.4
-* Virtualbox version 6.0.8
-* Jenkins version 2.176.1
-
 Use the Vagrantfile to create and install required components (using Virtualbox):
 ```
 vagrant up
@@ -36,6 +32,10 @@ Within Jenkins Credentials; add a Global Credential of type **AWS Credential**
 
 ### Pipeline ###
 
-Create a pipeline job, then within the **Pipeline** configuration set the definition to **Pipeline script from SCM**. Add **Git** repository URL `https://github.com/david-wells-1/jenkins-vagrant-terraform-pipeline.git`, the `Script Path` will automatically be set to the Jenkinsfile.
+Create a pipeline job:
+
+* Within the **Pipeline** configuration set the definition to **Pipeline script from SCM**
+* Add **Git** repository URL `https://github.com/david-wells-1/jenkins-vagrant-terraform-pipeline.git`
+* The `Script Path` will automatically be set to the Jenkinsfile.
 
 In this example, the Jenkinsfile pipeline will create a security group in the default VPC in eu-west-2
